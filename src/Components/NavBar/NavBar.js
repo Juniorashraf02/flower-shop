@@ -6,17 +6,17 @@ const NavBar = () => {
     const [open, setOpen] = useState(false);
     const routes = [
         { id: 1, name: 'Home', link: '/home' },
-        { id: 2, name: 'Reviews', link: '/shop' },
-        { id: 3, name: 'Dashboard', link: '/deals' },
-        { id: 4, name: 'Blogs', link: '/cupons' },
-        { id: 5, name: 'About', link: '/contact' }
+        { id: 2, name: 'Reviews', link: '/reviews' },
+        { id: 3, name: 'Dashboard', link: '/dashboard' },
+        { id: 4, name: 'Blogs', link: '/blogs' },
+        { id: 5, name: 'About', link: '/about' }
     ]
     return (
-        <nav className='bg-indigo-400'>
+        <nav className='bg-indigo-300'>
             <div onClick={() => setOpen(!open)} className="md:hidden">
                 {open ? <HiX className=''></HiX> : <HiMenu></HiMenu>}
             </div>
-            <ul className={`md:flex justify-center gap-x-10 absolute md:static duration-500 ease-in bg-indigo-400 w-full ${open ? 'top-4' : 'top-[-120px]'}`}>
+            <ul className={`md:flex justify-center gap-x-10 absolute md:static duration-500 ease-in bg-indigo-300 w-full ${open ? 'top-4' : 'top-[-120px]'}`}>
                 {
                     routes.map(route => <Link
                         key={route.id} route={route}

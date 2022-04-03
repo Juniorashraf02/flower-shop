@@ -2,7 +2,6 @@ import React from 'react';
 
 const Link = (props) => {
     const { name, link } = props.route;
-    console.log();
 
     return (
         <li>
