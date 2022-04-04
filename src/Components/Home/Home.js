@@ -18,7 +18,7 @@ const Home = () => {
                 </div>
                 <div className="mt-5 container mx-auto">
                     <h1 className="text-4xl font-bold text-orange-500">Customer reviews (3)</h1>
-                    <div className="flex justify-around mt-5 text-justify gap-12 ">
+                    {/* <div className="flex justify-around mt-5 text-justify gap-12 ">
                         <div className="w-1/2 border rounded-lg p-5">
                             <p className="font-medium">Istiak</p>
                             <p className="text-gray-600">Flowers are very lively. Thank you! Recommending this shop.</p>
@@ -43,7 +43,7 @@ const Home = () => {
                                 </small>
                             </p>
                         </div>
-                    </div>
+                    </div> */}
                     <Link to="/reviews">
                         <button className="rounded bg-blue-700 m-5 text-white px-5 py-1 mt-5">See all reviews</button></Link>
                 </div>
