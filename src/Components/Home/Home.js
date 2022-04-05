@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BsStarFill, BsStarHalf } from 'react-icons/bs';
+import useProducts from '../../hooks/useProducts';
+import HomeReviews from '../HomeReviews/HomeReviews';
+
+
+
 
 const Home = () => {
+    const [reviews, setReviews] = useProducts();
+    const newReview = reviews.slice(3);
+    console.log(newReview);
     return (
         <Link to='/home'>
             <div>
@@ -18,34 +25,12 @@ const Home = () => {
                 </div>
                 <div className="mt-5 container mx-auto">
                     <h1 className="text-4xl font-bold text-orange-500">Customer reviews (3)</h1>
-                    {/* <div className="flex justify-around mt-5 text-justify gap-12 ">
-                        <div className="w-1/2 border rounded-lg p-5">
-                            <p className="font-medium">Istiak</p>
-                            <p className="text-gray-600">Flowers are very lively. Thank you! Recommending this shop.</p>
-                           <p className="text-yellow-600">
-                                <small className="flex items-center"> <p className="mr-2">Ratings:</p> <BsStarFill /><BsStarFill /><BsStarFill /><BsStarFill /> <BsStarFill /> <p className="ml-2">(5/5)</p>
-                                </small>
-                            </p>
-                        </div>
-                        <div className="w-1/2 border rounded-lg p-5">
-                            <p className="font-medium">Ashraf</p>
-                            <p className="text-gray-600">Flowers has nice smelling! but the delivery was a little bit slow. Overall good!!!</p>
-                            <p className="text-yellow-600">
-                                <small className="flex items-center"> <p className="mr-2">Ratings:</p> <BsStarFill /><BsStarFill /><BsStarFill /><BsStarFill /> <BsStarHalf /> <p className="ml-2">(4.5/5)</p>
-                                </small>
-                            </p>
-                        </div>
-                        <div className="w-1/2 border rounded-lg p-5">
-                            <p className="font-medium">Shuvo</p>
-                            <p className="text-gray-600">I am recovering this shop for good quality products in cheap rate. Keep it up you guyz!!!</p>
-                            <p className="text-yellow-600">
-                                <small className="flex items-center"> <p className="mr-2">Ratings:</p> <BsStarFill /><BsStarFill /><BsStarFill /><BsStarFill /> <BsStarFill /> <p className="ml-2">(5/5)</p>
-                                </small>
-                            </p>
-                        </div>
-                    </div> */}
-                    <Link to="/reviews">
-                        <button className="rounded bg-blue-700 m-5 text-white px-5 py-1 mt-5">See all reviews</button></Link>
+                    {
+                        newReview.map(review=> <HomeReviews key={review.id} review={review}></HomeReviews>)
+                    }
+                    <Link to="/reviews"> 
+                        <button className="rounded bg-blue-700 m-5 text-white px-5 py-1 mt-5">See all reviews</button>
+                    </Link>
                 </div>
             </div>
         </Link>
