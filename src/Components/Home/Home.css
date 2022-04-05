@@ -4,3 +4,14 @@
     grid-gap: 80px;
     height: 100%;
 }
+
+
+@media screen and (max-width:768px) {
+
+    .review-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 80px;
+        height: 100%;
+    }
+}
