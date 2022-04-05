@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from '../Link/Link';
 import { HiMenu, HiX } from 'react-icons/hi';
+import './NavBar.css'
 
 const NavBar = () => {
     const [open, setOpen] = useState(false);
@@ -12,7 +13,7 @@ const NavBar = () => {
         { id: 5, name: 'About', link: '/about' }
     ]
     return (
-        <nav className='bg-indigo-300 w-full'>
+        <nav className='bg-indigo-300 navbar'>
             <div onClick={() => setOpen(!open)} className="md:hidden">
                 {open ? <HiX className=''></HiX> : <HiMenu></HiMenu>}
             </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from 'recharts';
+import './Dashboard.css';
 
 
 function Dashboard() {
@@ -9,7 +10,7 @@ function Dashboard() {
     }, []);
 
     return (
-            <div className="md:flex container mx-auto">
+            <div className="responsive-chart md:flex container mx-auto p-8">
                 <div>
                     <h1 className="text-3xl font-medium mb-5">Investment Vs Revenue</h1>
                 <AreaChart width={495} height={250} data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>

@@ -1,0 +1,13 @@
+.responsive-chart{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:720px) {
+    .responsive-chart{
+        height: 100%;
+        width: 60%;
+        margin: 0;
+        padding: 0;
+    }
+}
