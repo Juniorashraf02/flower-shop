@@ -1,4 +1,5 @@
 import React from 'react';
+import './Home.css'
 import { Link } from 'react-router-dom';
 import useProducts from '../../hooks/useProducts';
 import HomeReviews from '../HomeReviews/HomeReviews';
@@ -8,7 +9,7 @@ import HomeReviews from '../HomeReviews/HomeReviews';
 
 const Home = () => {
     const [reviews, setReviews] = useProducts();
-    const newReview = reviews.slice(3);
+    const newReview = reviews.slice(0,3);
     console.log(newReview);
     return (
         <Link to='/home'>
@@ -25,9 +26,13 @@ const Home = () => {
                 </div>
                 <div className="mt-5 container mx-auto">
                     <h1 className="text-4xl font-bold text-orange-500">Customer reviews (3)</h1>
-                    {
-                        newReview.map(review=> <HomeReviews key={review.id} review={review}></HomeReviews>)
-                    }
+                    <div className="review-section">
+                        {
+                            newReview.map(review => <HomeReviews key={review.id} review={review}></HomeReviews>)
+                        }
+
+                    </div>
+                    
                     <Link to="/reviews"> 
                         <button className="rounded bg-blue-700 m-5 text-white px-5 py-1 mt-5">See all reviews</button>
                     </Link>

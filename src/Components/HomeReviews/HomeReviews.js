@@ -7,7 +7,7 @@ const HomeReviews = (props) => {
     const { name, description, ratings} = props.review;
     console.log(name);
     return (
-        <div className="grid md:grid-col-3 gap-5">
+        <div className="">
             <div className="border rounded-lg p-5 my-5 justify-center items-center container mx-auto">
                 <p className="font-medium text-justify">{name}</p>
                 <p className="text-gray-600 text-justify">{description}</p>
