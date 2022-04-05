@@ -12,7 +12,7 @@ const NavBar = () => {
         { id: 5, name: 'About', link: '/about' }
     ]
     return (
-        <nav className='bg-indigo-300'>
+        <nav className='bg-indigo-300 w-full'>
             <div onClick={() => setOpen(!open)} className="md:hidden">
                 {open ? <HiX className=''></HiX> : <HiMenu></HiMenu>}
             </div>
